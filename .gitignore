@@ -12,6 +12,3 @@ yarn-error.log
 
 # deployment-specific configs
 now.json
-
-# media
-/src/demos
