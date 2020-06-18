@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 
 export default function Project(props) {
   return (
@@ -10,19 +11,34 @@ export default function Project(props) {
         <video src={props.project.demo} controls className="mx-auto" />
       )}
       <div className="px-6 py-4">
-        <a
-          className="mb-2 font-bold text-xl text-teal-400"
-          href={props.project.live}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {props.project.title}
-        </a>
+        <div className="flex justify-between">
+          <a
+            className="flex items-center mb-2 font-bold text-xl text-teal-400"
+            href={props.project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGlobe className="mx-1" />
+            {props.project.title}
+          </a>
+          <a
+            href={props.project.repoURL}
+            className="flex items-center mb-2 font-bold text-xl text-teal-400"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="mx-1" />
+            Source
+          </a>
+        </div>
         <p className="text-gray-700 text-base">{props.project.desc}</p>
       </div>
       <div className="px-6 py-4">
         {props.project.tech.map((tech) => (
-          <div key={tech} className="mx-2 py-1 px-3 inline-block bg-gray-200 rounded-full">
+          <div
+            key={tech}
+            className="mx-2 py-1 px-3 inline-block bg-gray-200 rounded-full"
+          >
             {tech}
           </div>
         ))}

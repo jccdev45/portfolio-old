@@ -1,4 +1,5 @@
 import React from "react";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -83,13 +84,32 @@ function IndexPage() {
             US Army generator mechanic, I understand that efficient
             troubleshooting is key. A lifelong passion for all things computers
             and technology transformed into a strong desire to find out how it
-            all works under the hood. I&apos;m prepared to bring levelheadedness
-            and out-of-the-box thinking wherever it&apos;s needed.
+            all works under the hood. Please feel free to take a look at some of
+            <AniLink
+              cover
+              duration={0.75}
+              bg="cyan"
+              to="/projects"
+              className="text-teal-500"
+            >
+              {" "}
+              my work
+            </AniLink>{" "}
+            or if you have any questions,{" "}
+            <AniLink
+              cover
+              duration={0.75}
+              bg="cyan"
+              to="/contact"
+              className="text-teal-500"
+            >
+              contact me.
+            </AniLink>{" "}
           </blockquote>
         </div>
 
         <figure className="w-2/3 lg:order-last md:w-1/3">
-          <img alt="Headshot" src={headshot} />
+          <img alt="Headshot" src={headshot} className="rounded" />
         </figure>
       </section>
 
