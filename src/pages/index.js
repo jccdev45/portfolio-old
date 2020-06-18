@@ -94,7 +94,7 @@ function IndexPage() {
       </section>
 
       <div className="flex justify-center lg:justify-center">
-        <div className="my-10 mx-12 flex md:flex-row flex-wrap justify-center border-b-4 border-r-4 border-gray-300">
+        <div className="my-10 md:my-20 md:mx-12 flex md:flex-row flex-wrap justify-center md:border-b-4 md:border-r-4 border-gray-300">
           {skills.map((item) => {
             let Icon;
 
@@ -109,7 +109,7 @@ function IndexPage() {
             return (
               <div
                 key={item.skill}
-                className="m-3 mx-2 md:m-5 h-auto font-serif text-lg flex md:flex-row items-center justify-start"
+                className="m-3 mx-2 md:m-5 h-auto font-serif text-lg flex flex-col md:flex-row items-center md:justify-start"
               >
                 {Icon === item.icon ? (
                   <Icon

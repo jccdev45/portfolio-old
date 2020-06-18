@@ -1,4 +1,5 @@
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import React, { useState } from "react";
 import logo from "../images/jcc-logo.png";
 
@@ -17,7 +18,7 @@ function Header() {
   return (
     <header className="bg-teal-300">
       <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
-        <Link to="/" className="flex items-center">
+        <AniLink to="/" paintDrip color="cyan" duration={1} className="flex">
           <img
             alt="JCCDev Logo"
             src={logo}
@@ -28,7 +29,7 @@ function Header() {
               {site.siteMetadata.title}
             </span>
           </h1>
-        </Link>
+        </AniLink>
 
         <button
           className="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"
@@ -59,13 +60,16 @@ function Header() {
               title: `Contact`,
             },
           ].map((link) => (
-            <Link
+            <AniLink
+              paintDrip
+              color="cyan"
+              duration={1}
               className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
               key={link.title}
               to={link.route}
             >
               {link.title}
-            </Link>
+            </AniLink>
           ))}
         </nav>
       </div>
