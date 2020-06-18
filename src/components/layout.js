@@ -12,28 +12,37 @@ function Layout({ children }) {
         {children}
       </main>
 
-      <footer className="bg-blue-700">
-        <nav className="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8">
-          <p className="text-white">
-            Created by{` `}
-            <a
-              className="font-bold no-underline"
-              href="https://bryant.io"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Taylor Bryant
-            </a>
-          </p>
+      <footer className="bg-teal-400">
+        <nav className="flex justify-end max-w-4xl p-4 mx-auto text-sm md:p-8">
+          {/* <p className="text-white"> */}
+            {/* <strong>Designed by:</strong> Jordan Cruz-Correa */}
+            {/* Based off https://www.gatsbyjs.org/starters/taylorbryant/gatsby-starter-tailwind/ */}
+          {/* </p> */}
 
           <p>
             <a
-              className="font-bold text-white no-underline"
-              href="https://github.com/taylorbryant/gatsby-starter-tailwind"
+              className="font-bold text-white no-underline mx-1"
+              href="https://github.com/JordanCruzCorrea"
               target="_blank"
               rel="noopener noreferrer"
             >
               GitHub
+            </a>
+            <a
+              className="font-bold text-white no-underline mx-1"
+              href="https://twitter.com/jccdev45"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </a>
+            <a
+              className="font-bold text-white no-underline mx-1"
+              href="https://instagram.com/jccdev45"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
             </a>
           </p>
         </nav>
