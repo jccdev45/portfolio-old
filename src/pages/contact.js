@@ -16,10 +16,10 @@ function ContactPage() {
           method="post"
           data-netlify-honeypot="bot-field"
           data-netlify="true"
-          name="contact"
+          name="Contact"
         >
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="Contact" value="contact" />
           <label
             className="block mb-2 text-xs font-bold uppercase"
             htmlFor="first-name"
