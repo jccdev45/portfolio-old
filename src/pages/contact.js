@@ -19,7 +19,7 @@ function ContactPage() {
           name="Contact"
         >
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="Contact" value="contact" />
+          <input type="hidden" name="Contact" value="Contact" />
           <label
             className="block mb-2 text-xs font-bold uppercase"
             htmlFor="first-name"
