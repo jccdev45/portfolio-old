@@ -19,7 +19,7 @@ function ContactPage() {
           name="Contact"
         >
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="Contact" value="Contact" />
+          <input type="hidden" name="form-name" value="Contact" />
           <label
             className="block mb-2 text-xs font-bold uppercase"
             htmlFor="first-name"
@@ -59,7 +59,7 @@ function ContactPage() {
             className="w-full mb-6 form-input"
             id="email"
             placeholder="crentist@totallyrealdentists.com"
-            type="text"
+            type="email"
           />
 
           <label
