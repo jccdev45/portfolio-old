@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 
 import Header from "./header";
 
@@ -13,44 +14,39 @@ function Layout({ children }) {
       </main>
 
       <footer className="bg-teal-400">
-        <nav className="flex justify-center max-w-5xl p-1 mx-auto text-sm md:p-8">
-          {/* <p className="text-white"> */}
-          {/* <strong>Designed by:</strong> Jordan Cruz-Correa */}
-          {/* Based off https://www.gatsbyjs.org/starters/taylorbryant/gatsby-starter-tailwind/ */}
-          {/* </p> */}
-
+        <nav className="flex justify-center max-w-5xl p-1 my-3 mx-auto text-sm md:p-8">
           <p className="flex justify-between">
             <a
-              className="font-bold text-lg text-white no-underline mx-5"
+              className="font-bold text-2xl text-white no-underline mx-5"
               href="https://linkedin.com/in/Jordan-Cruz-Correa"
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              <FaLinkedin />
             </a>
             <a
-              className="font-bold text-lg text-white no-underline mx-5"
+              className="font-bold text-2xl text-white no-underline mx-5"
               href="https://github.com/JordanCruzCorrea"
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub
+              <FaGithub />
             </a>
             <a
-              className="font-bold text-lg text-white no-underline mx-5"
+              className="font-bold text-2xl text-white no-underline mx-5"
               href="https://twitter.com/jccdev45"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Twitter
+              <FaTwitter />
             </a>
             <a
-              className="font-bold text-lg text-white no-underline mx-5"
+              className="font-bold text-2xl text-white no-underline mx-5"
               href="https://instagram.com/jccdev45"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Instagram
+              <FaInstagram />
             </a>
           </p>
         </nav>
