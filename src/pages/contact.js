@@ -61,7 +61,7 @@ class ContactPage extends Component() {
           <form
             className="mx-auto md:w-1/2"
             method="post"
-            action="/success"
+            action="#"
             netlify-honeypot="bot-field"
             data-netlify="true"
             name="Contact"
