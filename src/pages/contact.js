@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { navigate } from "gatsby";
 
-class ContactPage extends Component() {
+class ContactPage extends Component {
   constructor(props) {
     super(props);
     this.ContactPage = React.createRef();
