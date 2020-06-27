@@ -1,74 +1,101 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import headshot from "../images/floral-headshot.jpeg";
 import { FaCss3, FaJs, FaReact, FaNode } from "react-icons/fa";
 import { DiFirebase, DiRuby, DiPostgresql } from "react-icons/di";
 import { GiDart, GiHummingbird } from "react-icons/gi";
+
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 import gatsby from "../images/gatsby.png";
 import rails from "../images/rails.png";
 
-const skills = [
-  {
-    skill: `CSS`,
-    icon: FaCss3,
-    color: `rgb(0, 90, 231)`,
-  },
-  {
-    skill: `Javascript`,
-    icon: FaJs,
-    color: `rgb(235, 208, 86)`,
-  },
-  {
-    skill: `React`,
-    icon: FaReact,
-    color: `rgb(29, 206, 240)`,
-  },
-  {
-    skill: `GatsbyJS`,
-    icon: FaReact,
-    color: ``,
-  },
-  {
-    skill: `NodeJS`,
-    icon: FaNode,
-    color: `rgb(90, 160,	94)`,
-  },
-  {
-    skill: `PostgreSQL`,
-    icon: DiPostgresql,
-    color: `rgb(29,	92,	131	`,
-  },
-  {
-    skill: `Dart`,
-    icon: GiDart,
-    color: `rgb(0, 170, 233)`,
-  },
-  {
-    skill: `Flutter`,
-    icon: GiHummingbird,
-    color: `rgb(40, 190, 236)`,
-  },
-  {
-    skill: `Firebase`,
-    icon: DiFirebase,
-    color: `rgb(248, 191, 63)`,
-  },
-  {
-    skill: `Ruby`,
-    icon: DiRuby,
-    color: `rgb(180,	22,	16)`,
-  },
-  {
-    skill: `Rails`,
-    icon: FaReact,
-    color: ``,
-  },
-];
-
 function IndexPage() {
+  const img = useStaticQuery(graphql`
+    query img {
+      headshot: file(relativePath: { eq: "floral-headshot.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      rails: file(relativePath: { eq: "rails.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gatsby: file(relativePath: { eq: "gatsby.png" }) {
+        childImageSharp {
+          fixed(width: 35, height: 35) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
+
+  const skills = [
+    {
+      skill: `CSS`,
+      icon: FaCss3,
+      color: `rgb(0, 90, 231)`,
+    },
+    {
+      skill: `Javascript`,
+      icon: FaJs,
+      color: `rgb(235, 208, 86)`,
+    },
+    {
+      skill: `React`,
+      icon: FaReact,
+      color: `rgb(29, 206, 240)`,
+    },
+    {
+      skill: `GatsbyJS`,
+      icon: img.gatsby.childImageSharp.fluid,
+      color: ``,
+    },
+    {
+      skill: `NodeJS`,
+      icon: FaNode,
+      color: `rgb(90, 160,	94)`,
+    },
+    {
+      skill: `PostgreSQL`,
+      icon: DiPostgresql,
+      color: `rgb(29,	92,	131	`,
+    },
+    {
+      skill: `Dart`,
+      icon: GiDart,
+      color: `rgb(0, 170, 233)`,
+    },
+    {
+      skill: `Flutter`,
+      icon: GiHummingbird,
+      color: `rgb(40, 190, 236)`,
+    },
+    {
+      skill: `Firebase`,
+      icon: DiFirebase,
+      color: `rgb(248, 191, 63)`,
+    },
+    {
+      skill: `Ruby`,
+      icon: DiRuby,
+      color: `rgb(180,	22,	16)`,
+    },
+    {
+      skill: `Rails`,
+      icon: img.rails.childImageSharp.fluid,
+      color: ``,
+    },
+  ];
+
   return (
     <Layout>
       <SEO
@@ -109,7 +136,7 @@ function IndexPage() {
         </div>
 
         <figure className="w-2/3 lg:order-last md:w-1/3">
-          <img alt="Headshot" src={headshot} className="rounded" />
+          <Img fluid={img.headshot.childImageSharp.fluid} />
         </figure>
       </section>
 

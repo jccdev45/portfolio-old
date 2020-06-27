@@ -33,11 +33,11 @@ export default function Project(props) {
         </div>
         <p className="text-gray-700 text-base">{props.project.desc}</p>
       </div>
-      <div className="px-6 py-4">
+      <div className="px-6 py-4 flex flex-wrap justify-center md:justify-start">
         {props.project.tech.map((tech) => (
           <div
             key={tech}
-            className="mx-2 py-1 px-3 inline-block bg-gray-200 rounded-full"
+            className="mx-2 my-1 py-1 px-3 inline-block bg-gray-200 rounded-full"
           >
             {tech}
           </div>
