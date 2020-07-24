@@ -2,14 +2,24 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Project from "../components/project";
 
 import Petsy from "../demos/petsy.mp4";
 import Creator from "../demos/creator.mp4";
 import Collab from "../demos/Collab.mp4";
 import Luz from "../demos/Luz-Demo.mp4";
-import Project from "../components/project";
+import nyc from "../demos/restaurants-V2-demo.mp4";
 
 const projects = [
+  {
+    title: "NYC Health Inspections",
+    desc:
+      "Search and view grades & health inspection records of restaurants across NYC. Everything is dirty.",
+    tech: ["react", "react-hooks", "tailwindcss", "react-mapbox-gl"],
+    live: "https://nyc-health-violations.netlify.app/",
+    repoURL: ["https://github.com/JordanCruzCorrea/nyc-restaurant-violations"],
+    demo: nyc,
+  },
   {
     title: "Luz Electric",
     desc:
@@ -69,9 +79,11 @@ function ProjectsPage() {
       />
 
       <section className="-mx-3">
-        <div className="flex flex-wrap px-3">{projects.map((project, index) => (
-          <Project key={index} project={project} />
-        ))}</div>
+        <div className="flex flex-wrap px-3">
+          {projects.map((project, index) => (
+            <Project key={index} project={project} />
+          ))}
+        </div>
       </section>
     </Layout>
   );

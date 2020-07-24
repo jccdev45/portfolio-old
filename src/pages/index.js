@@ -98,14 +98,11 @@ function IndexPage() {
 
   return (
     <Layout>
-      <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="Home"
-      />
+      <SEO keywords={[`jccdev45`, `jordan cruz-correa`]} title="Home" />
 
       <section className="flex flex-col items-center md:flex-row">
-        <div className="mx-3 md:w-2/3 md:mr-8 order-last">
-          <blockquote className="py-3 md:pl-4 font-serif text-center leading-loose text-justify border-b-4 md:border-l-4 border-gray-300">
+        <div className="order-last mx-3 md:w-2/3 md:mr-8">
+          <blockquote className="py-3 font-serif leading-loose text-center border-b-4 border-gray-300 md:pl-4 md:border-l-4">
             I&apos;m a NYC-based software engineer with an eye for clean design
             and propensity for hands-on approaches. As a former electrician and
             US Army generator mechanic, I understand that efficient
@@ -141,7 +138,7 @@ function IndexPage() {
       </section>
 
       <div className="flex justify-center lg:justify-center">
-        <div className="my-10 md:my-20 md:mx-12 flex md:flex-row flex-wrap justify-center md:border-b-4 md:border-r-4 border-gray-300">
+        <div className="flex flex-wrap justify-center my-10 border-gray-300 md:my-20 md:mx-12 md:flex-row md:border-b-4 md:border-r-4">
           {skills.map((item) => {
             let Icon;
 
@@ -156,15 +153,15 @@ function IndexPage() {
             return (
               <div
                 key={item.skill}
-                className="m-3 mx-2 md:m-5 h-auto font-serif text-lg flex flex-col md:flex-row items-center md:justify-start"
+                className="flex flex-col items-center h-auto m-3 mx-2 font-serif text-lg md:m-5 md:flex-row md:justify-start"
               >
                 {Icon === item.icon ? (
                   <Icon
-                    className="mx-5 h-auto text-4xl"
+                    className="h-auto mx-5 text-4xl"
                     style={{ color: `${item.color}` }}
                   />
                 ) : (
-                  <img src={Icon} className="mx-5 w-auto h-10" />
+                  <img src={Icon} className="w-auto h-10 mx-5" />
                 )}
                 <span>{item.skill}</span>
               </div>
