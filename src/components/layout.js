@@ -1,56 +1,22 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import useDarkMode from "use-dark-mode";
 
 import Header from "./header";
+import Footer from "./footer";
 
 function Layout({ children }) {
+  const darkMode = useDarkMode(false);
+
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900">
+    <div className="flex flex-col min-h-screen font-sans">
       <Header />
 
-      <main className="flex-1 w-full max-w-5xl px-4 py-8 mx-auto md:px-8 md:py-16">
+      <main className="flex-1 w-full max-w-5xl p-4 mx-auto my-20 md:px-8 md:py-2">
         {children}
       </main>
 
-      <footer className="bg-teal-400">
-        <nav className="flex justify-center max-w-5xl p-1 my-3 mx-auto text-sm md:p-8">
-          <p className="flex justify-between">
-            <a
-              className="font-bold text-2xl text-white no-underline mx-5"
-              href="https://linkedin.com/in/Jordan-Cruz-Correa"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              className="font-bold text-2xl text-white no-underline mx-5"
-              href="https://github.com/JordanCruzCorrea"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-            </a>
-            <a
-              className="font-bold text-2xl text-white no-underline mx-5"
-              href="https://twitter.com/jccdev45"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              className="font-bold text-2xl text-white no-underline mx-5"
-              href="https://instagram.com/jccdev45"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram />
-            </a>
-          </p>
-        </nav>
-      </footer>
+      <Footer darkMode={darkMode} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import logo from "../images/jcc-logo.png";
+import logo from "../assets/images/jcc-logo.png";
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -16,15 +16,21 @@ function Header() {
   `);
 
   return (
-    <header className="bg-teal-300">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
-        <AniLink to="/" cover bg="cyan" duration={0.75} className="flex">
+    <header className="fixed top-0 z-50 w-full text-white bg-teal-500">
+      <div className="flex flex-wrap items-center justify-between max-w-4xl p-3 mx-auto">
+        <AniLink
+          to="/"
+          cover
+          bg="rgb(56, 178, 172)"
+          duration={0.75}
+          className="flex"
+        >
           <img
             alt="JCCDev Logo"
             src={logo}
             className="object-contain h-12 mx-1"
           />
-          <h1 className="flex items-center text-white no-underline">
+          <h1 className="flex items-center no-underline">
             <span className="text-xl font-bold tracking-tight">
               {site.siteMetadata.title}
             </span>
@@ -32,7 +38,7 @@ function Header() {
         </AniLink>
 
         <button
-          className="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+          className="flex items-center px-3 py-2 border border-white rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
@@ -48,7 +54,7 @@ function Header() {
         <nav
           className={`${
             isExpanded ? `block` : `hidden`
-          } md:block md:flex md:items-center w-full md:w-auto`}
+          } md:flex md:items-center w-full md:w-auto`}
         >
           {[
             {
@@ -62,9 +68,9 @@ function Header() {
           ].map((link) => (
             <AniLink
               cover
-              bg="cyan"
+              bg="rgb(56, 178, 172)"
               duration={0.75}
-              className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+              className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6"
               key={link.title}
               to={link.route}
             >

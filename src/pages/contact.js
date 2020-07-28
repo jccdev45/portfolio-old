@@ -1,17 +1,18 @@
-import React, { Component } from "react";
+import React, { useState, useRef } from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { navigate } from "gatsby";
 
-class ContactPage extends Component {
-  constructor(props) {
-    super(props);
-    this.ContactPage = React.createRef();
-    this.state = {};
-  }
+function ContactPage() {
+  const [state, setContactState] = useState({
+    // name: "",
+    // email: "",
+    // message: "",
+  });
+  const contactRef = useRef(null);
 
-  encode = (data) => {
+  const encode = (data) => {
     return Object.keys(data)
       .map(
         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
@@ -19,132 +20,105 @@ class ContactPage extends Component {
       .join("&");
   };
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setContactState({ ...state, [name]: value });
   };
 
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const form = this.ContactPage.current;
+    const form = contactRef.current;
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: this.encode({
+      body: encode({
         "form-name": form.getAttribute("name"),
-        ...this.state,
+        ...state,
       }),
     })
-      .then((response) => {
-        console.log("=======================");
-        console.log(`${JSON.stringify(response, null, 2)}`);
-        console.log("=======================");
-        navigate(form.getAttribute("action"));
-      })
-      .catch((error) => {
-        console.log("=======================");
-        console.log(`Error in form submit: ${error}`);
-        console.log("=======================");
-      });
+      .then(() => navigate("/"))
+      .catch((error) => alert(error));
+    setContactState({ name: "", email: "", message: "" });
   };
 
-  render() {
-    return (
-      <Layout>
-        <SEO
-          keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-          title="Contact"
-        />
-        <section>
-          <form
-            className="mx-auto md:w-1/2"
-            method="post"
-            action="#"
-            netlify-honeypot="bot-field"
-            data-netlify="true"
-            name="Contact"
-            onSubmit={this.handleSubmit}
-            ref={this.ContactPage}
+  return (
+    <Layout>
+      <SEO keywords={[`jordan cruz-correa`, `jccdev45`]} title="Contact" />
+      <section className="mt-10">
+        <form
+          className="mx-auto md:w-1/2"
+          method="post"
+          action="/"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          name="Contact"
+          onSubmit={handleSubmit}
+          ref={contactRef}
+        >
+          <input type="hidden" name="bot-field" onChange={handleChange} />
+          <input type="hidden" name="form-name" value="Contact" />
+          <label
+            className="block mb-2 text-xs font-bold uppercase"
+            htmlFor="first-name"
           >
-            <input
-              type="hidden"
-              name="bot-field"
-              onChange={this.handleChange}
-            />
-            <input type="hidden" name="form-name" value="Contact" />
-            <label
-              className="block mb-2 text-xs font-bold uppercase"
-              htmlFor="first-name"
-            >
-              First Name
-            </label>
+            Name
+          </label>
 
-            <input
-              onChange={this.handleChange}
-              className="w-full mb-6 form-input"
-              id="first-name"
-              placeholder="Crentist"
-              type="text"
-            />
+          <input
+            onChange={handleChange}
+            value={state.name}
+            name="name"
+            className="w-full mb-6 form-input"
+            id="first-name"
+            placeholder="Dr. Crentist the Dentist, DDS"
+            type="text"
+          />
 
-            <label
-              className="block mb-2 text-xs font-bold uppercase"
-              htmlFor="last-name"
-            >
-              Last Name
-            </label>
+          <label
+            className="block mb-2 text-xs font-bold uppercase"
+            htmlFor="email"
+          >
+            Email
+          </label>
 
-            <input
-              onChange={this.handleChange}
-              className="w-full mb-6 form-input"
-              id="last-name"
-              placeholder="the Dentist"
-              type="text"
-            />
+          <input
+            onChange={handleChange}
+            value={state.email}
+            name="email"
+            className="w-full mb-6 form-input"
+            id="email"
+            placeholder="crentist@totallyrealdentists.com"
+            type="email"
+          />
 
-            <label
-              className="block mb-2 text-xs font-bold uppercase"
-              htmlFor="email"
-            >
-              Email
-            </label>
+          <label
+            className="block mb-2 text-xs font-bold uppercase"
+            htmlFor="message"
+          >
+            Message
+          </label>
 
-            <input
-              onChange={this.handleChange}
-              className="w-full mb-6 form-input"
-              id="email"
-              placeholder="crentist@totallyrealdentists.com"
-              type="email"
-            />
+          <textarea
+            onChange={handleChange}
+            value={state.message}
+            name="message"
+            className="w-full mb-6 form-textarea"
+            id="message"
+            placeholder="You should floss more..."
+            rows="8"
+          />
 
-            <label
-              className="block mb-2 text-xs font-bold uppercase"
-              htmlFor="message"
-            >
-              Message
-            </label>
-
-            <textarea
-              onChange={this.handleChange}
-              className="w-full mb-6 form-textarea"
-              id="message"
-              placeholder="You should floss more..."
-              rows="8"
-            />
-
-            <button
-              className="px-4 py-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600"
-              type="submit"
-            >
-              Submit
-            </button>
-          </form>
-        </section>
-      </Layout>
-    );
-  }
+          <button
+            className="px-4 py-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </section>
+    </Layout>
+  );
 }
 
 export default ContactPage;
