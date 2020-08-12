@@ -12,7 +12,7 @@ function Layout({ children }) {
     <div className="flex flex-col min-h-screen font-sans">
       <Header />
 
-      <main className="flex-1 w-full max-w-5xl p-4 mx-auto my-20 md:px-8 md:py-2">
+      <main className="w-full max-w-5xl p-4 mx-auto my-20 md:px-8 md:py-2">
         {children}
       </main>
 

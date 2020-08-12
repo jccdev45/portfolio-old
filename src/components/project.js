@@ -28,7 +28,7 @@ export default function Project({ project }) {
           <div className="font-bold text-teal-400 uppercase">{title}</div>
           <div className="flex">
             <a
-              className="flex items-center mb-2 font-bold text-teal-400"
+              className="flex items-center mb-2 font-bold text-teal-400 transition-colors ease-in-out duration-400 hover:bg-gray-300"
               href={live}
               target="_blank"
               rel="noopener noreferrer"
@@ -38,7 +38,7 @@ export default function Project({ project }) {
             </a>
             <a
               href={repoURL}
-              className="flex items-center mb-2 font-bold text-teal-400"
+              className="flex items-center mb-2 font-bold text-teal-400 transition-colors ease-in-out duration-400 hover:bg-gray-300"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -5,11 +5,7 @@ import SEO from "../components/seo";
 import { navigate } from "gatsby";
 
 function ContactPage() {
-  const [state, setContactState] = useState({
-    // name: "",
-    // email: "",
-    // message: "",
-  });
+  const [state, setContactState] = useState({});
   const contactRef = useRef(null);
 
   const encode = (data) => {
@@ -45,9 +41,9 @@ function ContactPage() {
   return (
     <Layout>
       <SEO keywords={[`jordan cruz-correa`, `jccdev45`]} title="Contact" />
-      <section className="mt-10">
+      <section className="mt-16">
         <form
-          className="mx-auto md:w-1/2"
+          className="mx-auto md:w-2/3"
           method="post"
           action="/"
           netlify-honeypot="bot-field"

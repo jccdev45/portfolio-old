@@ -7,7 +7,8 @@ import Project from "../components/project";
 import myProjects from "../assets/data/projectList";
 
 function ProjectsPage() {
-  // const [checked, toggleCheck] = useState({});
+  // const [checked, toggleCheck] = useState(false);
+  // const [checkedList, toggleCheckedList] = useState([]);
   const [projects] = useState(myProjects);
 
   // const techToUniqueArray = () => {
@@ -25,9 +26,20 @@ function ProjectsPage() {
   //       key={tech}
   //       tech={tech}
   //       // checked={checked}
-  //       // handleClick={() => toggleCheck(!checked)}
+  //       handleClick={(e) => addCheckedToFilteredArray(e)}
   //     />
   //   ));
+  // };
+
+  // const addCheckedToFilteredArray = (e) => {
+  //   let checkedArr = [];
+  //   checkedArr.push({
+  //     name: e.target.name,
+  //     checked: true
+  //   });
+  //   // toggleCheck(!checked);
+  //   toggleCheckedList(checkedArr);
+  //   console.log(checkedList);
   // };
 
   return (

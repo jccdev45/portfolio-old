@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function Skillbox({ tech, checked, handleClick }) {
+export default function Skillbox({ tech, handleClick }) {
   return (
     <div className="w-auto mx-3">
       <input
@@ -9,7 +9,6 @@ export default function Skillbox({ tech, checked, handleClick }) {
         className="p-1 mr-2 leading-tight focus:outline-none"
         id={tech}
         name={tech}
-        checked={checked}
         onChange={handleClick}
       />
       <label htmlFor={tech} className="text-sm">
