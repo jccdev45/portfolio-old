@@ -73,12 +73,15 @@ function IndexPage() {
       <section className="flex flex-col items-center mt-24 md:flex-row">
         <div className="order-last mx-3 md:w-2/3 md:mr-8">
           <blockquote className="py-3 font-serif leading-loose text-center border-b-4 border-gray-300 md:text-justify md:pl-4 md:border-l-4">
-            I am a NYC-based software engineer with an eye for clean design and
-            propensity for hands-on approaches. As a former electrician and US
-            Army generator mechanic, I understand that efficient troubleshooting
-            is key. A lifelong passion for all things computers and technology
-            transformed into a strong desire to find out how it all works under
-            the hood. Please feel free to take a look at some of
+            A software engineer with an eye for clean design and a propensity
+            for hands-on approaches, I learned the value of efficient
+            troubleshooting firsthand as a US Army generator mechanic and
+            electrician. Later, my lifelong passion for computers and technology
+            transformed into a strong desire to find out how it all works and I
+            wanted to put my problem solving, design and troubleshooting skills
+            to use in a more comprehensive way. I complement my levelheaded
+            approach with outside-the-box thinking wherever it&apos;s needed. Please
+            feel free to take a look at some of
             <AniLink
               cover
               duration={0.75}
