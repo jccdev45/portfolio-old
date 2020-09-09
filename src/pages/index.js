@@ -70,7 +70,7 @@ function IndexPage() {
         title="Home"
       />
 
-      <section className="flex flex-col items-center mt-24 md:flex-row">
+      <section className="flex flex-col items-center md:mt-24 md:flex-row">
         <div className="order-last mx-3 md:w-2/3 md:mr-8">
           <blockquote className="py-3 font-serif leading-loose text-center border-b-4 border-gray-300 md:text-justify md:pl-4 md:border-l-4">
             A software engineer with an eye for clean design and a propensity
@@ -80,31 +80,33 @@ function IndexPage() {
             transformed into a strong desire to find out how it all works and I
             wanted to put my problem solving, design and troubleshooting skills
             to use in a more comprehensive way. I complement my levelheaded
-            approach with outside-the-box thinking wherever it&apos;s needed. Please
-            feel free to take a look at some of
-            <AniLink
-              cover
-              duration={0.75}
-              bg="cyan"
-              to="/projects"
-              className="text-teal-500"
-            >
-              my work
-            </AniLink>
-            or if you have any questions,
-            <AniLink
-              cover
-              duration={0.75}
-              bg="cyan"
-              to="/contact"
-              className="text-teal-500"
-            >
-              contact me.
-            </AniLink>
+            approach with outside-the-box thinking wherever it&apos;s needed.
+            <div className="pt-8 text-center">
+              Please feel free to take a look at some of
+              <AniLink
+                cover
+                duration={0.75}
+                bg="cyan"
+                to="/projects"
+                className="text-teal-500"
+              >
+                my work
+              </AniLink>
+              or if you have any questions,
+              <AniLink
+                cover
+                duration={0.75}
+                bg="cyan"
+                to="/contact"
+                className="text-teal-500"
+              >
+                contact me.
+              </AniLink>
+            </div>
           </blockquote>
         </div>
 
-        <figure className="w-2/3 lg:order-last md:w-1/3">
+        <figure className="w-2/3 my-8 lg:order-last md:w-1/3">
           <Img
             fluid={img.headshot.childImageSharp.fluid}
             className="rounded-lg"
@@ -114,7 +116,7 @@ function IndexPage() {
       </section>
 
       <div className="flex justify-center lg:justify-center">
-        <div className="flex flex-wrap justify-center my-10 border-gray-300 md:my-20 md:mx-12 md:flex-row md:border-b-4 md:border-r-4">
+        <div className="flex flex-wrap items-center justify-center my-10 border-gray-300 md:my-20 md:mx-12 md:flex-row md:border-b-4 md:border-r-4">
           {skillMap()}
         </div>
       </div>

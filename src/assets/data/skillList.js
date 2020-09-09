@@ -4,11 +4,6 @@ import { GiDart, GiHummingbird } from "react-icons/gi";
 
 const skills = [
   {
-    skill: `TailwindCSS`,
-    icon: ``,
-    color: ``,
-  },
-  {
     skill: `Javascript`,
     icon: FaJs,
     color: `rgb(235, 208, 86)`,
@@ -20,6 +15,11 @@ const skills = [
   },
   {
     skill: `GatsbyJS`,
+    icon: ``,
+    color: ``,
+  },
+  {
+    skill: `TailwindCSS`,
     icon: ``,
     color: ``,
   },
