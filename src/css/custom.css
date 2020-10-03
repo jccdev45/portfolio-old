@@ -1,24 +1,38 @@
 * {
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', 'serif';
+}
+
 body.light-mode {
-  background-color: #fff;
+  /* background-color: #fff; */
   /* color: rgb(156, 156, 156); */
-  transition: background-color 0.3s ease;
+  transition: color 0.1s ease;
 }
+
 body.dark-mode {
-  background-color: #363535;
+  /* background-color: #363535; */
   color: rgb(206, 205, 205);
-  transition: background-color 0.3s ease;
+  transition: color 0.1s ease;
 }
-a, button {
+
+a,
+.dark-mode-btn {
   padding: 0.25rem;
   border: 1px solid transparent;
   border-radius: 0.5rem;
 }
-a:hover, button:hover {
+
+a:hover,
+.dark-mode-btn {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
   background-color: rgba(255, 255, 255, 0.11);
-  transition: border .25s ease-in-out;
+  transition: border 0.25s ease-in-out;
 }
