@@ -50,14 +50,6 @@ function Footer({ darkMode }) {
       <p className="flex items-center justify-between order-first">
         <a
           className="mx-1 text-xl font-bold no-underline lg:mx-5 md:text-2xl"
-          href="https://linkedin.com/in/Jordan-Cruz-Correa"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          className="mx-1 text-xl font-bold no-underline lg:mx-5 md:text-2xl"
           href="https://github.com/JordanCruzCorrea"
           target="_blank"
           rel="noopener noreferrer"
@@ -66,12 +58,13 @@ function Footer({ darkMode }) {
         </a>
         <a
           className="mx-1 text-xl font-bold no-underline lg:mx-5 md:text-2xl"
-          href="https://twitter.com/jccdev45"
+          href="https://linkedin.com/in/Jordan-Cruz-Correa"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaTwitter />
+          <FaLinkedin />
         </a>
+
         <a
           className="mx-1 text-xl font-bold no-underline lg:mx-5 md:text-2xl"
           href="https://instagram.com/jccdev45"
@@ -79,6 +72,14 @@ function Footer({ darkMode }) {
           rel="noopener noreferrer"
         >
           <FaInstagram />
+        </a>
+        <a
+          className="mx-1 text-xl font-bold no-underline lg:mx-5 md:text-2xl"
+          href="https://twitter.com/jccdev45"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaTwitter />
         </a>
       </p>
     </footer>

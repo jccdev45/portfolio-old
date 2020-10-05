@@ -55,7 +55,7 @@ function IndexPage() {
       <div className="flex flex-col min-h-screen">
         <Header darkMode={darkMode} />
 
-        <main className="w-full max-w-5xl p-4 mx-auto my-20 md:p-0 md:px-8 md:py-2">
+        <main className="w-full max-w-5xl p-4 mx-auto mt-20 md:p-0 md:px-8 md:py-2">
           <About darkMode={darkMode} />
           <Skillset darkMode={darkMode} />
           <Projects darkMode={darkMode} />

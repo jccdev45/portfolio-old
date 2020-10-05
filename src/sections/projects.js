@@ -8,7 +8,7 @@ function Projects({ darkMode }) {
   return (
     <section
       id="projects"
-      className="p-4 mt-20 rounded md:p-6"
+      className="p-4 my-20 rounded md:p-6"
       style={
         darkMode.value
           ? { backgroundColor: `rgba(50, 50, 50, 0.75)` }

@@ -46,7 +46,7 @@ function Skillset({ darkMode }) {
   }
   return (
     <section
-      className="flex flex-col justify-center order-last p-6 mt-12 rounded lg:justify-center"
+      className="flex flex-col justify-center order-last p-6 my-20 rounded lg:justify-center"
       style={
         darkMode.value
           ? { backgroundColor: `rgba(50, 50, 50, 0.75)` }

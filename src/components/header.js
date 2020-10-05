@@ -13,7 +13,7 @@ function Header({ darkMode }) {
       }`}
     >
       <div className="flex flex-wrap items-center justify-between max-w-4xl p-3 mx-auto">
-        <Link to="/">
+        <Link to="/" onClick={() => toggleExpansion(!isExpanded)}>
           <img
             alt="JCCDev Logo"
             src={logo}
