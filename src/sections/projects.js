@@ -28,7 +28,7 @@ function Projects({ darkMode }) {
 }
 
 Projects.propTypes = {
-  darkMode: PropTypes.any,
+  darkMode: PropTypes.object,
 };
 
 export default Projects;

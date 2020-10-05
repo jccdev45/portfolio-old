@@ -31,7 +31,7 @@ function Toggle({ darkMode }) {
 }
 
 Toggle.propTypes = {
-  darkMode: PropTypes.any,
+  darkMode: PropTypes.object,
   setDarkMode: PropTypes.func,
 };
 

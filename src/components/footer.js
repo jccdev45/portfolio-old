@@ -8,7 +8,7 @@ function Footer({ darkMode }) {
   return (
     <footer
       className={`fixed bottom-0 z-50 flex justify-around w-full p-2 mx-auto text-white text-md md:p-4 ${
-        darkMode.value ? "bg-gray-700" : "bg-gray-600"
+        darkMode.value ? `bg-gray-700` : `bg-gray-600`
       }`}
     >
       <div className="flex items-center justify-center">
@@ -86,7 +86,7 @@ function Footer({ darkMode }) {
 }
 
 Footer.propTypes = {
-  darkMode: PropTypes.any,
+  darkMode: PropTypes.object,
 };
 
 export default Footer;

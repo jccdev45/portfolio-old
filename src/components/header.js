@@ -9,7 +9,7 @@ function Header({ darkMode }) {
   return (
     <header
       className={`fixed top-0 z-50 w-full text-white ${
-        darkMode.value ? "bg-gray-700" : "bg-gray-600"
+        darkMode.value ? `bg-gray-700` : `bg-gray-600`
       }`}
     >
       <div className="flex flex-wrap items-center justify-between max-w-4xl p-3 mx-auto">
@@ -66,7 +66,7 @@ function Header({ darkMode }) {
 }
 
 Header.propTypes = {
-  darkMode: PropTypes.any,
+  darkMode: PropTypes.object,
 };
 
 export default Header;

@@ -65,7 +65,7 @@ function Skillset({ darkMode }) {
 }
 
 Skillset.propTypes = {
-  darkMode: PropTypes.any,
+  darkMode: PropTypes.object,
 };
 
 export default Skillset;

@@ -124,7 +124,7 @@ function Contact({ darkMode }) {
 }
 
 Contact.propTypes = {
-  darkMode: PropTypes.any,
+  darkMode: PropTypes.object,
 };
 
 export default Contact;

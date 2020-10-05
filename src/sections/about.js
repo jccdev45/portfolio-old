@@ -70,7 +70,7 @@ function About({ darkMode }) {
 }
 
 About.propTypes = {
-  darkMode: PropTypes.any,
+  darkMode: PropTypes.object,
 };
 
 export default About;
