@@ -39,7 +39,7 @@ function Contact({ darkMode }) {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center w-full p-6 mt-20 mb-12 rounded md:items-stretch"
+      className="flex flex-col items-center w-full p-6 rounded md:my-24 md:items-stretch"
       style={
         darkMode.value
           ? { backgroundColor: `rgba(50, 50, 50, 0.75)` }
