@@ -25,7 +25,7 @@ export default function Project({ project }) {
       ></iframe>
       <div className="p-3 md:px-6">
         <div className="flex flex-col items-center justify-between my-2 md:flex-row">
-          <div className="my-2 text-2xl font-bold text-center text-red-400 underline uppercase">{title}</div>
+          <div className="my-2 text-2xl font-bold text-center text-red-500 uppercase">{title}</div>
           <div className="flex">
             <a
               className="flex items-center mb-2 font-bold text-red-400 underline uppercase transition-colors ease-in-out duration-400 hover:bg-gray-300"

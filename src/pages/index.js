@@ -12,6 +12,7 @@ import Contact from "../sections/contact";
 import Skillset from "../sections/skillset";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import DarkMode from "../components/darkMode";
 
 function IndexPage() {
   const darkMode = useDarkMode(false);
@@ -63,6 +64,7 @@ function IndexPage() {
         </main>
 
         <Footer darkMode={darkMode} />
+        <DarkMode darkMode={darkMode} />
       </div>
     </BackgroundImage>
   );

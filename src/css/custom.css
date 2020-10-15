@@ -22,15 +22,13 @@ body.dark-mode {
   transition: color 0.1s ease;
 }
 
-a,
-.dark-mode-btn {
+a {
   padding: 0.25rem;
   border: 1px solid transparent;
   border-radius: 0.5rem;
 }
 
-a:hover,
-.dark-mode-btn {
+a:hover {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
   background-color: rgba(255, 255, 255, 0.11);

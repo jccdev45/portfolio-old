@@ -17,7 +17,7 @@ function Header({ darkMode }) {
           <img
             alt="JCCDev Logo"
             src={logo}
-            className="object-contain h-12 mx-1"
+            className="object-contain h-12 mx-1 focus:outline-none"
           />
         </Link>
 
