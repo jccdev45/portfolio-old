@@ -29,7 +29,7 @@ function Footer({ darkMode }) {
 
         <a
           className="mx-1 text-xl font-bold no-underline lg:mx-5 md:text-2xl"
-          href="https://instagram.com/jccdev45"
+          href="https://instagram.com/jccdev"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -37,7 +37,7 @@ function Footer({ darkMode }) {
         </a>
         <a
           className="mx-1 text-xl font-bold no-underline lg:mx-5 md:text-2xl"
-          href="https://twitter.com/jccdev45"
+          href="https://twitter.com/jccdev"
           target="_blank"
           rel="noopener noreferrer"
         >

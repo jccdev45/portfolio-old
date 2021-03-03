@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `Jordan Cruz-Correa`,
     description: `Portfolio site for Jordan Cruz-Correa`,
-    author: `@jccdev45`,
+    author: `@jccdev`,
   },
   plugins: [
     `gatsby-plugin-eslint`,
