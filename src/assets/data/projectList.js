@@ -23,8 +23,8 @@ const myProjects = [
     title: "Luz Electric",
     desc:
       "Luz Electric is a residential, commercial and industrial electrical contracting company based in the Bronx. This is an updated redesign of their existing website, created with GatsbyJS and styled with react-bootstrap, deployed via Netlify.",
-    tech: ["react", "gatsbyjs", "react-bootstrap", "ani-link"],
-    live: "https://luz-electric.netlify.com/",
+    tech: ["react", "gatsbyjs", "tailwindcss"],
+    live: "https://luzcontrolsystems.com/",
     repoURL: ["https://github.com/JordanCruzCorrea/luz-electric"],
     demo: "https://www.youtube.com/embed/lxjgXCtqgac",
   },

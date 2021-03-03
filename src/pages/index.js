@@ -15,7 +15,7 @@ import Footer from "../components/footer";
 import DarkMode from "../components/darkMode";
 
 function IndexPage() {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode(true);
 
   const img = useStaticQuery(graphql`
     query bgImg {
