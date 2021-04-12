@@ -12,7 +12,7 @@ function Footer({ darkMode }) {
       <p className="flex items-center justify-between order-first">
         <a
           className="mx-1 text-xl font-bold no-underline lg:mx-5 md:text-2xl"
-          href="https://github.com/JordanCruzCorrea"
+          href="https://github.com/jccdev45"
           target="_blank"
           rel="noopener noreferrer"
         >

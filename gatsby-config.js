@@ -28,8 +28,8 @@ module.exports = {
         name: `jcc-dev-portfolio`,
         short_name: `portfolio`,
         start_url: `/`,
-        background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.teal["400"],
+        // background_color: fullConfig.theme.colors.white,
+        // theme_color: fullConfig.theme.colors.teal["400"],
         display: `minimal-ui`,
         icon: `src/assets/images/jcc-logo.png`,
       },
@@ -43,14 +43,6 @@ module.exports = {
           ...(process.env.NODE_ENV === `production`
             ? [require(`cssnano`)]
             : []),
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Montserrat`,
         ],
       },
     },
