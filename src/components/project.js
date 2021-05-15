@@ -1,8 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { FaGithub, FaGlobe } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { useDarkMode } from "../util/context/ThemeContext";
 
 export default function Project({ project }) {
+	const { darkMode } = useDarkMode().state;
 	const { demo, live, repoURL, desc, tech, title, id } = project;
 
 	const borderCalc = () => {
@@ -14,6 +15,7 @@ export default function Project({ project }) {
 			className={`p-2 md:p-5 my-4 overflow-hidden border-red-400 rounded shadow-xl sm:w-full ${borderCalc()} border-b-4`}
 		>
 			<iframe
+				title={title}
 				className="sm:w-full"
 				style={{ height: `25rem`, width: `100%` }}
 				samesite="none"
@@ -26,21 +28,19 @@ export default function Project({ project }) {
 			<div className="p-3 md:px-6">
 				<div className="flex flex-col items-center justify-between my-2 md:flex-row">
 					<div className="my-2 text-2xl font-bold text-center text-red-500 uppercase">
-						{title}
-					</div>
-					<div className="flex">
 						<a
-							className="flex items-center mb-2 font-bold text-red-400 underline uppercase transition-colors ease-in-out duration-400 hover:bg-gray-300"
+							className="flex items-center m-0 font-bold text-red-400 uppercase transition-colors ease-in-out duration-400"
 							href={live}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<FaGlobe className="w-6 h-6 mx-1" />
-							Live
+							{title}
 						</a>
+					</div>
+					<div className="flex">
 						<a
 							href={repoURL}
-							className="flex items-center mb-2 font-bold text-red-400 underline uppercase transition-colors ease-in-out duration-400 hover:bg-gray-300"
+							className="flex items-center mb-2 font-bold text-red-400 uppercase transition-colors ease-in-out duration-400"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -55,7 +55,9 @@ export default function Project({ project }) {
 				{tech.map((tech) => (
 					<div
 						key={tech}
-						className="inline-block px-3 py-1 mx-2 my-1 text-black bg-gray-200 rounded-full project-tech"
+						className={`${
+							darkMode ? "text-black bg-gray-200" : "text-white bg-gray-400"
+						} inline-block px-3 py-1 mx-2 my-1 rounded-full project-tech`}
 					>
 						{tech}
 					</div>
@@ -64,13 +66,3 @@ export default function Project({ project }) {
 		</article>
 	);
 }
-
-Project.propTypes = {
-	project: PropTypes.object,
-	title: PropTypes.string,
-	desc: PropTypes.string,
-	tech: PropTypes.array,
-	live: PropTypes.string,
-	repoURL: PropTypes.string,
-	demo: PropTypes.string,
-};

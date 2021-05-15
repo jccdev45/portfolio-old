@@ -1,13 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import skills from "../assets/data/skillList";
 
 import gatsby from "../assets/images/gatsby.png";
 import rails from "../assets/images/rails.png";
 import tailwind from "../assets/images/tailwind.png";
+import { useDarkMode } from "../util/context/ThemeContext";
 
-function Skillset({ darkMode }) {
+function Skillset() {
+	const { darkMode } = useDarkMode().state;
+
 	const skillMap = () => {
 		return skills.map((item) => {
 			let Icon;
@@ -33,7 +35,11 @@ function Skillset({ darkMode }) {
 							style={{ color: `${item.color}` }}
 						/>
 					) : (
-						<img src={Icon} className="w-auto h-10 mx-5 rounded-full" />
+						<img
+							src={Icon}
+							alt={item.skill}
+							className="w-auto h-10 mx-5 rounded-full"
+						/>
 					)}
 					<span>{item.skill}</span>
 				</div>
@@ -41,16 +47,13 @@ function Skillset({ darkMode }) {
 		});
 	};
 
-	{
-		/* TODO: REORDER BASED ON SKILL TYPE */
-	}
 	return (
 		<section
 			className="flex flex-col justify-center order-last p-6 my-20 rounded lg:justify-center"
 			style={
-				darkMode.value
-					? { backgroundColor: `rgba(50, 50, 50, 0.75)` }
-					: { backgroundColor: `rgba(255, 255, 255, 0.9)` }
+				darkMode
+					? { backgroundColor: `rgba(50, 50, 50, 0.75)`, color: `white` }
+					: { backgroundColor: `rgba(255, 255, 255, 0.9)`, color: `black` }
 			}
 		>
 			<h1 className="w-3/4 pl-4 text-2xl uppercase border-b-4 border-red-300">
@@ -63,9 +66,5 @@ function Skillset({ darkMode }) {
 		</section>
 	);
 }
-
-Skillset.propTypes = {
-	darkMode: PropTypes.object,
-};
 
 export default Skillset;
