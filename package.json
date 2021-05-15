@@ -1,25 +1,25 @@
 {
   "name": "jccdev-portfolio",
-  "description": "Portfolio Gatsby site for Jordan Cruz-Correa (JCCDev45)",
+  "description": "Portfolio Gatsby site for Jordan Cruz-Correa (JCCDev)",
   "version": "4.0.0",
-  "author": "Jordan Cruz-Correa (JCCDev45)",
+  "author": "Jordan Cruz-Correa (JCCDev)",
   "dependencies": {
-    "@fontsource/montserrat": "^4.2.2",
-    "gatsby": "^3.0.4",
-    "gatsby-background-image": "^1.4.1",
-    "gatsby-image": "^3.0.0",
-    "gatsby-plugin-manifest": "^3.0.0",
-    "gatsby-plugin-offline": "^4.0.0",
-    "gatsby-plugin-postcss": "^4.0.0",
-    "gatsby-plugin-react-helmet": "^4.0.0",
-    "gatsby-plugin-sharp": "^3.0.1",
-    "gatsby-source-filesystem": "^3.0.0",
-    "gatsby-transformer-sharp": "^3.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "@fontsource/montserrat": "^4.3.0",
+    "gatsby": "^3.5.0",
+    "gatsby-background-image": "^1.5.3",
+    "gatsby-image": "^3.5.0",
+    "gatsby-plugin-manifest": "^3.5.0",
+    "gatsby-plugin-offline": "^4.5.0",
+    "gatsby-plugin-postcss": "^4.5.0",
+    "gatsby-plugin-react-helmet": "^4.5.0",
+    "gatsby-plugin-sharp": "^3.5.0",
+    "gatsby-source-filesystem": "^3.5.0",
+    "gatsby-transformer-sharp": "^3.5.0",
+    "postcss": "^8.2.15",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-helmet": "6.1.0",
-    "react-icons": "^4.2.0",
-    "use-dark-mode": "^2.3.1"
+    "react-icons": "^4.2.0"
   },
   "keywords": [
     "gatsby",
@@ -44,25 +44,18 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "devDependencies": {
-    "@tailwindcss/custom-forms": "0.2.1",
+    "@tailwindcss/forms": "^0.3.2",
     "autoprefixer": "^10.2.5",
-    "babel-eslint": "10.1.0",
-    "cssnano": "4.1.10",
-    "eslint": "^7.21.0",
-    "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-react": "^7.22.0",
-    "gatsby-plugin-eslint": "^3.0.0",
-    "prettier": "^2.2.1",
-    "tailwindcss": "^2.0.3",
-    "webpack": "^5.25.0",
-    "webpack-cli": "^4.5.0"
+    "cssnano": "5.0.2",
+    "tailwindcss": "^2.1.2",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JordanCruzCorrea/portfolio"
+    "url": "https://github.com/jccdev45/portfolio"
   },
   "bugs": {
-    "url": "https://github.com/JordanCruzCorrea/portfolio/issues"
+    "url": "https://github.com/jccdev45/portfolio/issues"
   }
 }
