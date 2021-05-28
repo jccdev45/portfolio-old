@@ -5,6 +5,7 @@
   "author": "Jordan Cruz-Correa (JCCDev)",
   "dependencies": {
     "@fontsource/montserrat": "^4.3.0",
+    "@headlessui/react": "^1.2.0",
     "gatsby": "^3.5.0",
     "gatsby-background-image": "^1.5.3",
     "gatsby-image": "^3.5.0",
