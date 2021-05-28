@@ -4,4 +4,10 @@
 /*! purgecss end ignore */
 @tailwind utilities;
 
-@import './custom.css'
+/* @layer components {
+  .section {
+    @apply;
+  }
+} */
+
+@import "./custom.css";

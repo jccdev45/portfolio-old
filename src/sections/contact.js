@@ -40,12 +40,9 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center w-full p-6 mt-12 rounded md:mt-24 md:mb-12 md:items-stretch"
-      style={
-        darkMode
-          ? { backgroundColor: `rgba(50, 50, 50, 0.75)`, color: `white` }
-          : { backgroundColor: `rgba(255, 255, 255, 0.9)`, color: `black` }
-      }
+      className={`${
+        darkMode ? "bg-gray-700 text-white" : "bg-gray-100 text-black"
+      } flex flex-col bg-opacity-90 items-center w-full p-6 mt-12 rounded md:mt-24 md:mb-12 md:items-stretch`}
     >
       <h1 className="w-3/4 pl-4 mb-4 text-2xl uppercase border-b-4 border-red-300">
         <span className="text-4xl text-red-400">C</span>ontact
@@ -68,7 +65,7 @@ function Contact() {
         >
           <small
             className={`${
-              darkMode ? "bg-gray-400" : "bg-white"
+              darkMode ? "bg-gray-500" : "bg-white shadow"
             } absolute px-2 font-bold rounded -top-3 left-2`}
           >
             Name
@@ -92,7 +89,7 @@ function Contact() {
         >
           <small
             className={`${
-              darkMode ? "bg-gray-400" : "bg-white"
+              darkMode ? "bg-gray-500" : "bg-white shadow"
             } absolute px-2 font-bold rounded -top-3 left-2`}
           >
             Email
@@ -115,7 +112,7 @@ function Contact() {
         >
           <small
             className={`${
-              darkMode ? "bg-gray-400" : "bg-white"
+              darkMode ? "bg-gray-500" : "bg-white shadow"
             } absolute px-2 font-bold rounded -top-3 left-2`}
           >
             Message

@@ -20,7 +20,7 @@ export default function DarkMode() {
       <Switch
         className={`${
           darkMode ? "bg-gray-700" : "bg-gray-500"
-        } p-1 mx-2 rounded dark-mode-btn focus:outline-none`}
+        } p-1 mx-2 rounded dark-mode-btn border border-white focus:outline-none`}
         type="button"
         // onClick={toggle}
         onChange={() => {
