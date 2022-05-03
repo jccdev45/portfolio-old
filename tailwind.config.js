@@ -1,7 +1,7 @@
-// See https://tailwindcss.com/docs/configuration for details
 module.exports = {
-	purge: ["./src/**/*.js"],
-	theme: {},
-	variants: {},
-	plugins: [require("@tailwindcss/forms")],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [require("@tailwindcss/forms")],
 };
