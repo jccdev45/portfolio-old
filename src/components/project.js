@@ -12,7 +12,7 @@ export default function Project({ project }) {
 
   return (
     <article
-      className={`p-2 md:p-5 my-4 overflow-hidden border-red-400 rounded shadow-xl sm:w-full ${borderCalc()} border-b-4`}
+      className={`p-2 md:p-5 overflow-hidden border-red-400 rounded shadow-xl sm:w-full ${borderCalc()} border-b-4`}
     >
       <iframe
         title={title}

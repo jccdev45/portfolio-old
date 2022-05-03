@@ -22,7 +22,7 @@ function About() {
     <section
       className={`${
         darkMode ? "bg-gray-700 text-white" : "bg-gray-100 text-black"
-      } flex flex-col bg-opacity-90 items-center w-full p-6 mt-2 rounded md:items-stretch md:p-8`}
+      } flex flex-col gap-8 bg-opacity-90 items-center w-full p-6 mt-2 rounded md:items-stretch md:p-8`}
     >
       <div
         className={`${
@@ -42,15 +42,15 @@ function About() {
             darkMode ? "text-white" : "text-black"
           } leading-loose text-lg border-b-4 border-red-400 lg:w-2/3 md:mr-8 md:pl-4 md:border-l-4`}
         >
-          <span className="text-2xl text-red-400">I</span> am a software
-          engineer with an eye for clean design and a propensity for hands-on
-          approaches, I learned the value of efficient troubleshooting firsthand
-          as a US Army generator mechanic and electrician. Later, my lifelong
-          passion for computers and technology transformed into a strong desire
-          to find out how it all works and I wanted to put my problem solving,
-          design and troubleshooting skills to use in a more comprehensive way.
-          I complement my levelheaded approach with outside-the-box thinking
-          wherever it&apos;s needed.
+          <span className="text-2xl text-red-400">I'm</span> a software engineer
+          with an eye for clean design and a propensity for hands-on approaches.
+          I've learned the value of efficient troubleshooting firsthand as a US
+          Army generator mechanic and electrician. My lifelong passion for
+          computers and technology eventually transformed into a strong desire
+          to find out how it all works and I wanted to put my problem solving &
+          troubleshooting skills to use in a more comprehensive way. I
+          complement my levelheaded approach with outside-the-box thinking
+          wherever it's needed.
           <div className="pt-8 text-2xl text-center">
             <span className="text-3xl text-red-400">P</span>lease feel free to
             take a look at some of

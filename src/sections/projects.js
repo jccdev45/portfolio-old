@@ -19,7 +19,7 @@ function Projects() {
       <h1 className="w-3/4 pl-4 mb-4 text-2xl uppercase border-b-4 border-red-300">
         <span className="text-4xl text-red-400">P</span>rojects
       </h1>
-      <div className="flex flex-wrap mt-6">
+      <div className="flex flex-wrap gap-12 mt-6">
         {myProjects.map((project) => (
           <Project key={project.id} project={project} />
         ))}
